@@ -4,7 +4,7 @@
     align-items: center;
     align-content: center;
     padding: 10px;
-    
+    justify-content: space-between;
     /* border-radius: 5px;
     border:2px solid black;
     align-content: center; 
@@ -50,6 +50,7 @@ button:hover{
 }
 .input_group{
   position: relative;
+  padding: 2;
 }
 .input_group_input{
   font: inherit;

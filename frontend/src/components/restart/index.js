@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Shown from "../shown";
+import './styles.css'
 import { useNavigate, useParams } from "react-router-dom";
 import { changePassword, changeRecoveryPassword } from "../../services/authService";
 import Logo from '../../assest/logo-gran-langostino.png'
@@ -30,7 +31,7 @@ export default function Restart(){
     return(
     <div className=" wrapper d-flex justify-content-center align-items-center vh-100 w-100 m-auto">
       <div className='rounder-4'>
-      <div className='login-wrapper p-2'>
+      <div id="" className=' login-wrapper p-2 shadow border-light rounded-4 border border-1 bg-gradient'>
       <img src={Logo} alt=''/>
       <h1>Restart Password</h1>
       <form onSubmit={handleSubmit} className=''>
@@ -38,9 +39,9 @@ export default function Restart(){
         <Shown label='New Password' password={newPass} setPassword={setNewPass}/>
         </div>
         <div>
-        <Shown label='Confirm New Password' password={confirmPass} setPassword={setConfirmPass}/>
+        <Shown label='Confirm' password={confirmPass} setPassword={setConfirmPass}/>
         </div>
-        <div className='align-content-center text-align-center align-items-center p-2'>
+        <div className='align-content-center text-align-center align-items-center ps-4'>
           <button type="submit">Reestablecer</button>
         </div>
       </form>

@@ -30,18 +30,18 @@ export default function Recovery(){
     return(
     <div className=" wrapper d-flex justify-content-center align-items-center vh-100 w-100 m-auto">
       <div className='rounder-4'>
-      <div className='login-wrapper p-2'>
+      <div className='login-wrapper p-2 shadow border-light rounded-4 border border-1 bg-gradient' /* style={{ background:"white"}} */>
       <img src={Logo} alt=''/>
-      <h1>Recovery Password</h1>
+      <h1 className="m-2">Recovery Password</h1>
       <form onSubmit={handleSubmit} className=''>
-        <div className='input_group'>
+        <div className='input_group m-2'>
           <input type='text' id='usuario' className='input_group_input' required onChange={(e)=> setEmail(e.target.value)}/>
           <label for="usuario" className='input_group_label'>Ingrese su Email</label>
         </div>
-        <div className='align-content-center text-align-center align-items-center'>
+        <div className='align-content-center text-align-center align-items-center ms-4'>
           <button type="submit">Enviar Correo</button>
         </div>
-        <a href="/login" className="text-decoration-none text-align-center">Volver al Login</a>
+        <a href="/login" className="text-decoration-none text-align-center m-5"style={{fontSize:'medium'}}><strong>Volver al Login</strong></a>
       </form>
     </div>
     </div>

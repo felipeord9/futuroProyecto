@@ -27,26 +27,27 @@ export default function Login() {
   return(
     <div className=" wrapper d-flex justify-content-center align-items-center vh-100 w-100 m-auto">
       <div className='rounder-4'>
-      <div className='login-wrapper '>
+      <div className='login-wrapper p-2 shadow border-light rounded-4 border border-1 bg-gradient d-flexjustify-content-between'>
       <img src={Logo} alt=''/>
       <h1>Log In</h1>
       <form onSubmit={handleLogin} className=''>
-        <div className='input_group'>
+        <div className='input_group m-2 '>
           <input type='text' id='usuario' className='input_group_input' required onChange={(e)=> setEmail(e.target.value)}/>
           <label for="usuario" className='input_group_label'>Usuario</label>
         </div>
-        <div className='input_group'>
+        <div className='input_group m-2 d-flex flex-column'>
           <input type={shown ? 'text':'password'} onChange={(e)=>setPassword(e.target.value)} id='email' className='input_group_input' required/>
           <label for="email" className='input_group_label'>Password</label>
-        </div>
-        <label>
-          <input type='checkbox' onClick={switchShown}></input>{shown ? 'ocultar':'mostrar'}
-          {/* <Checkbox defaultChecked sx={{'& .MuiSvgIcon-root':{fontSize:28}, color:FE7F29}}/>{shown ? 'ocultar':'mostrar'} */}
+        
+        <label className=''>
+          <input type='checkbox' onClick={switchShown}></input><strong>{shown ? 'Ocultar':'Mostrar'}</strong>
+          {/* <Checkbox defaultChecked sx={{'& .MuiSvgIcon-root':{fontSize:28}, color:FE7F29}}/>{shown ? 'Ocultar':'Mostrar'} */}
         </label>
-        <div className='align-content-center text-align-center align-items-center'>
-          <button type="submit" /* onSubmit={handleSubmit} */>Entrar</button>
         </div>
-        <label><a href='/recovery' className='text-decoration-none'>¿Olvidaste tu constraseña?</a></label>
+        <div className='align-content-center text-align-center align-items-center ms-5'>
+          <button type="submit"><strong>Entrar</strong></button>
+        </div>
+        <label><a href='/recovery' className='text-decoration-none m-2' style={{fontSize:'medium'}}><strong>¿Olvidaste tu constraseña?</strong></a></label>
       </form>
       {isLoginLoading && <div className='loading'>Cargando...</div>}
       {hasLoginError && <div className='text-danger text-center mt-2'>Credenciales Incorrectas</div>}

@@ -7,13 +7,11 @@ export default function Shown({id,label}){
     
     return(
     <div>
-        <div className='input_group p-2' style={{cursor:"pointer"}}>
+        <div className='input_group m-1 d-flex flex-column'>
             <input type={shown ? 'text':'password'} id='newPass' className='input_group_input' required onChange={(e)=> setPassword(e.target.value)} autoComplete="off"/>
             <label for="newPass" className='input_group_label'>{label}</label>
-        </div>
-        <div className="d-flex align-items-center position-relative">
             <label>
-            <input type="checkbox" className="fontSize:" onClick={switchShown}></input>{shown ? 'Ocultar':'Mostrar'}
+            <input type="checkbox" className="fontSize:" onClick={switchShown}></input><strong>{shown ? 'Ocultar':'Mostrar'}</strong>
             </label>
         </div>
     </div>
